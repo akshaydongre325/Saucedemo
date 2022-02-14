@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite  name="SaucedemoSuite" thread-count="3" parallel = "classes" >
+
+<listeners>
+		<listener class-name="extendReport.ExtentTestNGIReporterListener" />
+	</listeners> 
+
+ <test  name="SaucedemoTestChrome">
+	<parameter name = "browser" value = "chrome">
+	</parameter>
+    <classes>
+     
+      <class name="tests.TestNG_practicse"/>
+	  <class name="tests.TestNG1"/>
+
+    </classes>
+  </test> <!-- SaucedemoTest -->
+
+ <test name="SaucedemoTestFirefoxDriver">
+	<parameter name = "browser" value = "FirefoxDriver">
+	</parameter>
+    <classes>
+      
+      <class name="tests.TestNG_practicse"/>
+	  <class name="tests.TestNG1"/>
+    </classes>
+  </test> <!-- SaucedemoTest -->
+ 
+
+
+ 
+</suite> <!-- SaucedemoSuite -->
