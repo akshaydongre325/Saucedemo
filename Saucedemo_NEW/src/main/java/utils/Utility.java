@@ -51,14 +51,23 @@ public class Utility {
 			return data;
 			}	
 	
-			
+//			What do you mean by wrapper class and how will you do data conversion?
+		
+//				Wrapper class in java are used for data conversion.
+//				In data conversion if user wants to convert Int to string, String to int, Boolean, double then we use Wrapper class. 
+//				
+//				integer.parseInt(); - To convert string to Integer
+//				Double.parseDouble(); - To convert string to Double
+//				Boolean.parseBoolean(); - To convert string to Boolean
+//				String.valueof(); - To convert Integer to String.
+
 	
 	public static void getScreenShot(WebDriver driver , int testId) throws IOException, InterruptedException {
 		
 		System.out.println("getScreenShot");
 		
 		 // Create object of SimpleDateFormat class and decide the format
-		 DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH-mm-ss");
+		 DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
 		 
 		 //get current date time with Date()
 		 Date date = new Date();

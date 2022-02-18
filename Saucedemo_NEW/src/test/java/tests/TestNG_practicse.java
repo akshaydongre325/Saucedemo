@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -256,9 +257,6 @@ public class TestNG_practicse extends Browser {
 		
 		yourCardPage3.clickOnCheakoutButton();
 		
-		
-		
-		
 		yourInformationPage4.sendFirstName();
 		
 		yourInformationPage4.sendPassword();
@@ -308,7 +306,12 @@ public class TestNG_practicse extends Browser {
 		
 			 swagLab1=null;
 			 addTOCardPage2=null;
-			
+			 
+			  yourCardPage3 = null ;
+			  
+			  yourInformationPage4 = null;
+			  
+			  overView5 = null;
 		
 		}
 			
@@ -317,11 +320,12 @@ public class TestNG_practicse extends Browser {
 		System.out.println("afterTest");
 		
 		
-		Thread.sleep(3500);
+		Thread.sleep(3000);
 		
 		driver.quit();
 		
 		driver=null;
+		
 		System.gc();
 		
 		

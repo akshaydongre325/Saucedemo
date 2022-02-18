@@ -9,7 +9,6 @@
     <classes>
       <class name="tests.TestNG_practicse">
         <methods>
-          <include name="test1"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
           <include name="logOutFromApllication"/>
@@ -19,47 +18,6 @@
           <include name="closeTab"/>
         </methods>
       </class> <!-- tests.TestNG_practicse -->
-      <class name="tests.TestNG1">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="beforeMethod"/>
-          <include name="test2"/>
-          <include name="afterTest"/>
-          <include name="test1"/>
-          <include name="beforeClass"/>
-          <include name="closeTab"/>
-          <include name="logOutFromApllication"/>
-        </methods>
-      </class> <!-- tests.TestNG1 -->
     </classes>
   </test> <!-- SaucedemoTestChrome(failed) -->
-  <test thread-count="3" parallel="classes" name="SaucedemoTestFirefoxDriver(failed)">
-    <parameter name="browser" value="FirefoxDriver"/>
-    <classes>
-      <class name="tests.TestNG_practicse">
-        <methods>
-          <include name="test1"/>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
-          <include name="logOutFromApllication"/>
-          <include name="test2"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-          <include name="closeTab"/>
-        </methods>
-      </class> <!-- tests.TestNG_practicse -->
-      <class name="tests.TestNG1">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="beforeMethod"/>
-          <include name="test2"/>
-          <include name="afterTest"/>
-          <include name="test1"/>
-          <include name="beforeClass"/>
-          <include name="closeTab"/>
-          <include name="logOutFromApllication"/>
-        </methods>
-      </class> <!-- tests.TestNG1 -->
-    </classes>
-  </test> <!-- SaucedemoTestFirefoxDriver(failed) -->
 </suite> <!-- Failed suite [SaucedemoSuite] -->
