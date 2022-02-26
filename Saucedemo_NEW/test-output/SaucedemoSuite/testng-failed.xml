@@ -4,8 +4,8 @@
   <listeners>
     <listener class-name="extendReport.ExtentTestNGIReporterListener"/>
   </listeners>
-  <test thread-count="3" parallel="classes" name="SaucedemoTestChrome(failed)">
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="3" parallel="classes" name="SaucedemoTestFirefoxDriver(failed)">
+    <parameter name="browser" value="FirefoxDriver"/>
     <classes>
       <class name="tests.TestNG_practicse">
         <methods>
@@ -19,5 +19,5 @@
         </methods>
       </class> <!-- tests.TestNG_practicse -->
     </classes>
-  </test> <!-- SaucedemoTestChrome(failed) -->
+  </test> <!-- SaucedemoTestFirefoxDriver(failed) -->
 </suite> <!-- Failed suite [SaucedemoSuite] -->

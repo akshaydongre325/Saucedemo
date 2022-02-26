@@ -33,7 +33,7 @@ import pom.YourCardPage3;
 import pom.YourInformationPage4;
 import utils.Utility;
 
-public class TestNG_practicse extends Browser {
+public class TestNG_practicse extends Browser  {
 
 
 		private WebDriver driver ;

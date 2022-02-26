@@ -2,6 +2,7 @@ package tests;
 
 import static org.testng.Assert.fail;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -10,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -25,8 +28,9 @@ import pom.OverView5;
 import pom.SwagLab1;
 import pom.YourCardPage3;
 import pom.YourInformationPage4;
+import utils.Utility;
 
-public class TestNG1 {
+public class TestNG1  {
 
 		WebDriver driver ;
 		 SwagLab1 swagLab1;
@@ -35,7 +39,7 @@ public class TestNG1 {
 		 OverView5 overView5 ;
 		 YourInformationPage4 yourInformationPage4 ;
 		 SoftAssert soft;
-		 
+		private int testId;
 		 @BeforeTest
 		 @Parameters("browser")
 		 public void beforeTest (String browser) throws InterruptedException {
@@ -119,7 +123,7 @@ public class TestNG1 {
 	public void test1() {
 		System.out.println("test1NG");
 		
-		
+		testId = 201;
 		
 		addTOCardPage2.clickOnAddToCardButton();
 		
@@ -170,7 +174,7 @@ public class TestNG1 {
 	public void test2() {
 		System.out.println("test2NG");
 		
-		
+		testId=202;
 		
 		addTOCardPage2.clickOnAddToCardButton();
 		
@@ -182,7 +186,7 @@ public class TestNG1 {
 		
 		boolean k =	v.equals("https://www.saucedemo.com/cart.html");
 		
-		if (k== true)
+		if (k == true)
 		{
 			System.out.println("correct url");
 		}
@@ -221,9 +225,17 @@ public class TestNG1 {
 	
 	
 	@AfterMethod
-	public void logOutFromApllication() {
-		System.out.println("afterMethod");
+	public void logOutFromApllication(ITestResult result) throws IOException, InterruptedException 
+		{
 		
+			System.out.println("afterMethod");
+			
+			if(ITestResult.FAILURE == result.getStatus()) {
+				
+				Utility.getScreenShot(driver, testId);
+			}
+			
+			
 		
 		
 		overView5.clickOnMenuButton();
@@ -232,8 +244,10 @@ public class TestNG1 {
 		
 		
 		
+		}	
 		
-	}
+		
+	
 	
 	@AfterClass
 	public void closeTab() {
